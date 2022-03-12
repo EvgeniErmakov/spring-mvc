@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form method="GET" action="/people/person" th:object="${person}">
+  <label for="name">Name222</label>
+  <input name="name" type="text" id="name"/>
+  <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors ="*{name}">error</div>
+</form>
+
+<h1 th:text="${person.getName()}"></h1>
+
+</body>
+</html>
